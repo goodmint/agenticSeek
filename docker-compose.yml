@@ -81,7 +81,7 @@ services:
       - ${LM_STUDIO_PORT:-1234}:${LM_STUDIO_PORT:-1234}
       - ${CUSTOM_ADDITIONAL_LLM_PORT:-8000}:${CUSTOM_ADDITIONAL_LLM_PORT:-8000}
     volumes:
-      - ./:/app
+      # - ./:/app  # Commented out to avoid resource deadlock on macOS
       - ${WORK_DIR:-.}:/opt/workspace
     command: python3 api.py
     environment:
