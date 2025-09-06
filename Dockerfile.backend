@@ -4,25 +4,24 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 # Install essential packages and Chrome dependencies
 RUN apt-get update -y && apt-get install -y \
-    wget \
-    gnupg2 \
-    ca-certificates \
-    unzip \
-    xvfb \
-    libxss1 \
-    libappindicator1 \
-    fonts-liberation \
-    libnss3 \
-    libatk1.0-0 \
-    libatk-bridge2.0-0 \
-    libcups2 \
-    libdrm2 \
-    libxcomposite1 \
-    libxdamage1 \
-    libxrandr2 \
-    xdg-utils \
-    dbus \
-    && rm -rf /var/lib/apt/lists/*
+  wget \
+  gnupg2 \
+  ca-certificates \
+  unzip \
+  xvfb \
+  libxss1 \
+  fonts-liberation \
+  libnss3 \
+  libatk1.0-0 \
+  libatk-bridge2.0-0 \
+  libcups2 \
+  libdrm2 \
+  libxcomposite1 \
+  libxdamage1 \
+  libxrandr2 \
+  xdg-utils \
+  dbus \
+  && rm -rf /var/lib/apt/lists/*
 
 RUN apt-get update -y && \
       apt-get install -y \
